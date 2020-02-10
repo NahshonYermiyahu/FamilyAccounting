@@ -1,0 +1,28 @@
+<div class="title-block">
+
+  <h3 class="title pull-left">
+    Bill page<span class="sparkline bar"></span>
+  </h3>
+
+</div>
+<section>
+  <div class="row text-center" *ngIf="!isLoaded">
+    <app-loading-spinner></app-loading-spinner>
+  </div>
+
+  <div class="row" *ngIf="isLoaded">
+    <app-bill-card [bill]="bill" [currencyIls]="currencyIls" [currencyEur]="currencyEur"></app-bill-card>
+<!--    <app-currency-card [currencyIls]="currencyIls" [currencyEur]="currencyEur"></app-currency-card>-->
+  </div>
+</section>
+
+
+<!--<section class="section">-->
+<!--  <div class="row text-center" *ngIf="!isLoaded">-->
+<!--    <app-loading-spinner></app-loading-spinner>-->
+<!--  </div>-->
+<!--  <div class="row" *ngIf="isLoaded">-->
+<!--    <app-bill-card [bill]="bill" [currencyIls]="currencyIls" [currencyEur]="currencyEur"></app-bill-card>-->
+<!--&lt;!&ndash;    <app-currency-card [currencyIls]="currencyIls" [currencyEur]="currencyEur"></app-currency-card>&ndash;&gt;-->
+<!--  </div>-->
+<!--</section>-->
